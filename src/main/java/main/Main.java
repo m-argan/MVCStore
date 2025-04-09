@@ -1,6 +1,9 @@
 package main;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import models.AdderModel;
 
@@ -13,10 +16,24 @@ public class Main extends Application
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws Exception
+	public void start(Stage stage) throws Exception
 	{
-		AdderModel model = new AdderModel();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("views/MainView.fxml"));
+		
+		BorderPane view = loader.load();
+		
+		Scene s = new Scene(view);
+		stage.setScene(s);
+		stage.show();
+		
+		//AdderModel model = new AdderModel();
 
+	}
+	
+	public static void main(String [] args)
+	{
+		launch(args);
 	}
 
 }
