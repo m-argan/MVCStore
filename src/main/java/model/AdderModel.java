@@ -1,10 +1,11 @@
-package models;
+package model;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
 public class AdderModel
 {
+	
 	DoubleProperty answer = new SimpleDoubleProperty();
 	DoubleProperty num1 = new SimpleDoubleProperty();
 	DoubleProperty num2 = new SimpleDoubleProperty();
@@ -29,9 +30,9 @@ public class AdderModel
 	   return answer;
 	 }
 	
-	public void add(DoubleProperty num1, DoubleProperty num2)
+	public void add(double value)
 	 {
-	   answer.set(num1.get()+ num2.get()); 
+	   answer.set(value); 
 	 }
 
 }

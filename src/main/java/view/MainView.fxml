@@ -6,23 +6,22 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
    <top>
       <Label text="Welcome to adder!" BorderPane.alignment="CENTER" />
    </top>
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="firstNum" />
+            <TextField fx:id="Num1TextField" />
             <Label text="+" />
-            <TextField fx:id="secNum" />
+            <TextField fx:id="Num2TextField" />
             <Label text="=" />
-            <Label fx:id="answer" />
+            <Label fx:id="answerLabel" prefHeight="17.0" prefWidth="160.0" />
          </children>
       </HBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#onAdd" text="add" BorderPane.alignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#onAddButton" text="add" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
