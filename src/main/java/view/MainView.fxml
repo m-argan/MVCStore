@@ -22,6 +22,6 @@
       </HBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#onAddButton" text="add" BorderPane.alignment="CENTER" />
+      <Button fx:id="AddButton" mnemonicParsing="false" onAction="#onAddButton" text="add" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

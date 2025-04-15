@@ -1,3 +1,4 @@
+package main;
 
 
 import javafx.application.Application;
@@ -22,7 +23,7 @@ public class MVCMain extends Application
 	{
 		AdderModel model = new AdderModel();
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MVCMain.class.getResource("view/MainView.fxml"));
+		loader.setLocation(MVCMain.class.getResource("../view/MainView.fxml"));
 		BorderPane view = loader.load();
 		
 		MainController cont = loader.getController();
