@@ -74,15 +74,9 @@ public class TestAdder
 	  public void testAdds(FxRobot robot)
 	  {
 		
-	    checkAdder(robot,"1","2","$3.00");
-	    checkAdder(robot,"10","2","$12.00");
-
-	    /*
-	    assertThrows(NumberFormatException.class, () -> {
-		    	enterAmt(robot, "one", "two");
-		    });
-		*/
-	    checkAdder(robot, "two", "one", "$0.0");
+	    checkAdder(robot,"1","2","3");
+	    checkAdder(robot,"10","2","12");
+	    checkAdder(robot, "two", "one", "0");
 	    
 	    
 	  }

@@ -9,7 +9,7 @@ import model.AdderModel;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
-import javafx.util.converter.CurrencyStringConverter;
+import javafx.util.converter.NumberStringConverter;
 
 public class MainController
 {
@@ -33,7 +33,7 @@ public class MainController
 		model = newModel;
 		
 		
-		StringConverter<Number> fmt = new CurrencyStringConverter();
+		StringConverter<Number> fmt = new NumberStringConverter();
 	    
 		//Integer fmt;
 	    Bindings.bindBidirectional(answerLabel.textProperty(),
@@ -69,14 +69,7 @@ public class MainController
     {
     	double value = 0.0;
     	System.out.println("onAddButton");
-    	//try {
     	value = getAmt();
-    	/*
-    	} catch(NumberFormatException e)
-    	{
-    		Num1TextField.textProperty().set("");
-			Num2TextField.textProperty().set("");
-    	}*/
     	model.add(value);
     	Num1TextField.textProperty().set("");
 		Num2TextField.textProperty().set("");
